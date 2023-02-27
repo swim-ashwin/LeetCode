@@ -26,6 +26,7 @@ public class Method2{
         String output = String.format("%s is %s",input ,partial_output);
         System.out.print(output);
         //I added a new feature!!!
+        //Demo Comment
 
         // if(result == false){
         //     String not_pana = String.format("%s is not panagram!",input);
