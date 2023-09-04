@@ -1,4 +1,11 @@
 public class repeat{
+
+   public static void main(String[] args){
+        String test1 = "abab"; 
+        boolean result1 = repeatedSubstringPattern(test1);
+        System.out.println("Test 1: " + result1); 
+    }
+
      public boolean repeatedSubstringPattern(String s) {
         for (int size = 1;size <= s.length()/2;size++) {
             if (s.length() % size == 0) {
