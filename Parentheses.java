@@ -1,19 +1,27 @@
-import java.util.Stack;
-
 public class parantheses{
     
-    public boolean isValid(String s) {
-        Stack<Character> stack = new Stack<Character>();
-        for (char c : s.toCharArray()) {
-            if (c == '(')
-                stack.push(')');
-            else if (c == '{')
-                stack.push('}');
-            else if (c == '[')
-                stack.push(']');
-            else if (stack.isEmpty() || stack.pop() != c)
-                return false;
-        }
-        return stack.isEmpty();
+   public static boolean isValid(String s) {
+                int p = 0, sb = 0, cb = 0;
+
+                for (char c : s.toCharArray()) {
+                    if (c == '(')
+                        p++;
+                    else if (c == '[')
+                        sb++;
+                    else if (c == '{')
+                        cb++;
+                    else if (c == ')') {
+                        if (p == 0) return false;
+                        p--;
+                    } else if (c == ']') {
+                        if (sb == 0) return false;
+                        sb--;
+                    } else if (c == '}') {
+                        if (cb == 0) return false;
+                        cb--;
+                    }
+                }
+                return p == 0 && sb == 0 && cb == 0;
+            }
+        
     }
-}
