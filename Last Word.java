@@ -1,40 +1,41 @@
 public class last_word{
 
     public static void main(String[] args) {
-        String str = "I like swimming.";
+        String str = "I like food .";
 
         System.out.println("Length of last word in \"" + str + "\": " + lengthOfLastWordA1(str));
     }
 
-    public static int lengthOfLastWord(String s) {
-        int lastSpace = -1;
-        char[] chars = s.toCharArray();
-        for(int i = 0; i < chars.length; i++){
-            if(chars[i] == ' '){
-                lastSpace = i;
-            }
-        }
-        return chars.length - lastSpace - 1;
-    }
+    // public static int lengthOfLastWord(String s) {
+    //     int lastSpace = -1;
+    //     char[] chars = s.toCharArray();
+    //     for(int i = 0; i < chars.length; i++){
+    //         if(chars[i] == ' '){
+    //             lastSpace = i;
+    //         }
+    //     }
+    //     return chars.length - lastSpace - 1;
+    // }
     public static int lengthOfLastWordA1(String s) {
-    int start = 0;
-    int end = 0;
-    char[] chars = s.toCharArray();
+    int end = s.length() - 1;
 
-    for(int i = chars.length - 1; i >= 0; i--) {
-        if(chars[i] == ' ' || chars[i] == '.') {
-            start = i - 1;
+    for(; end >= 0; end--) {
+        if(s.charAt(end) != ' ' && s.charAt(end) != '.') {
+            break;
+        }
+        if(s.charAt(end) == ' ' && s.charAt(end) == '.'){
             break;
         }
     }
-    for(int j = start; j >= 0; j--){
-        if(chars[j] == ' '){
-            end = j;
+    int start = end;
+
+    for(; start >= 0; start--){
+        if(s.charAt(start) == ' '){
             break;
         }
     }
 
-    return start - end;
+    return end - start;
 
         //consider for .
         // Ashwin is a great programmer       .
