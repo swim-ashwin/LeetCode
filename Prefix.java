@@ -4,3 +4,20 @@
 // - for each character at i, iterate through each string str[j]
 // - check if i is equal to the length of str[j] or if charAt(i) is != to character ch
 // - if true, return substring of str[0] from 0 to i
+
+public class prefix{
+    public String A1(String[] str){
+        if(str.length == 0 || str == null){
+            return "";
+        }
+        for(int i = 0; i < str[0].length(); i++){
+            char ch = str[0]. charAt(i);
+            for(int j = 1; j < str.length; j++){
+                if(i == str[j].length() || str[j].charAt(i) != ch){
+                    return str[0].substring(0, i);
+                }
+            }
+        }
+        return str[0];
+    }
+}
