@@ -6,6 +6,14 @@
 // - if true, return substring of str[0] from 0 to i
 
 public class prefix{
+
+    public static void main(String[] args) {
+        prefix p1 = new prefix();
+
+        String[] test1 = {"a", "abc", "ab"};
+        System.out.println("Result: " + p1.A1(test1));
+    }
+
     public String A1(String[] str){
         if(str.length == 0 || str == null){
             return "";
