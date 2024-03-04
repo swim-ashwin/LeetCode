@@ -29,3 +29,28 @@ public class prefix{
         return str[0];
     }
 }
+
+
+/*
+null null abc -
+a b c +
+aa ab ac +
+abc ab abb +
+null null null +
+empty +
+null empty null +
+a a a +
+a +
+a aab aac +
+a ab abc +
+aaaa aa aaaaa +
+abbbb abab aaca +
+ab aabc abc +
+aaaaaa null aaac +
+null null null +
+ab ac abac +
+waa wwaa w 
+x xy xyz +
+xy xyz xyza +
+x null xyz -
+*/
