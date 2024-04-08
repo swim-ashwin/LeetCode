@@ -1,0 +1,11 @@
+public class billionString {
+    /*
+     * create a 2d array to add the zip codes in
+     * check if number at location is a digit by finding ascii value
+     * go from adress order and add the digits to the array in row 1
+     * check the list to see if there are 8 characters
+     * remove the first three and you are left with a zip code
+     * when moving onto the next address create a new row in the 2d array and repreat the populating process
+     * return the 2d array 
+     */
+}
