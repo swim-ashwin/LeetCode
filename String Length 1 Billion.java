@@ -11,20 +11,21 @@ public class billionString {
      */
      
      public static void main(String[] args){
-      String str = "slates";
+      String str = "slate";
       System.out.print(isZipCode(str));
      }
 
-     public static boolean isZipCode(String str){
+     public static boolean isZipCode(String str) {
       int count = 0;
-        for(int i = 0; i < str.length(); i ++){
-         count +=1;
-        }
-        if(count == 5){
-         return true;
-        }
-        else{
-         return false;
-        }
-     }
+      for(int i = 0; i < str.length(); i++) {
+          char x = str.charAt(i);
+          if(Character.isDigit(x)) {
+              count += 1;
+          } else {
+              return false;
+          }
+      }
+      return count == 5;
+  }
+  
 }
