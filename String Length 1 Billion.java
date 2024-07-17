@@ -11,7 +11,7 @@ public class billionString {
      */
      
      public static void main(String[] args){
-      String str = "slate";
+      String str = "12345";
       System.out.print(isZipCode(str));
      }
 
@@ -27,5 +27,13 @@ public class billionString {
       }
       return count == 5;
   }
+/*
+ * Traversal Algorithm:
+ * create a count variable
+ * loop through the string starting from char 0 - 4
+ * run isZipCode
+ * increment count by one
+ * repeat until count = 1 billion
+ */
   
 }
